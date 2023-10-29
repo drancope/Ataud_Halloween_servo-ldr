@@ -15,7 +15,7 @@ void loop() {
   int valor = analogRead(A0);
   //Serial.print("sensor = ");
   //Serial.println(valor);
-   if (valor < 100) {
+   if (valor > 600) {
     myservo.write(10);                  // sets the servo position according to the scaled value
     delay(2015);      
     digitalWrite(LED_BUILTIN, HIGH);
@@ -23,5 +23,5 @@ void loop() {
     myservo.write(100);                  // sets the servo position according to the scaled value                          // waits for the servo to get there
     digitalWrite(LED_BUILTIN, LOW);
   }
-  delay(100);
+  delay(500);
 }
